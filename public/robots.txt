@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://localimage.online/sitemap.xml
+
+# Crawl-delay (optional, some bots respect this)
+Crawl-delay: 1
+
+# Disallow admin/private paths (none currently)
+# Disallow: /admin/

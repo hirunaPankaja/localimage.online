@@ -1,42 +1,55 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { ConverterApp } from '../components/converter/ConverterApp';
 import { SEOHead } from '../components/layout/SEOHead';
 import { SEOContent } from '../components/seo/SEOContent';
 import { FAQAccordion } from '../components/seo/FAQAccordion';
+
 export function HeicToJpgPage() {
   const faqs = [
-  {
-    question: 'Why do I need to convert HEIC to JPG?',
-    answer:
-    "HEIC is Apple's proprietary image format. While efficient, it's not supported by many websites, Windows computers, or Android devices. Converting to JPG ensures your photos can be viewed everywhere."
-  },
-  {
-    question: 'Does converting HEIC to JPG reduce quality?',
-    answer:
-    'JPG is a lossy format, so there is technically some data loss, but our converter uses high-quality algorithms to ensure the visual difference is negligible for most users. At 90% quality, most people cannot tell the difference.'
-  },
-  {
-    question: 'Can I convert multiple HEIC files at once?',
-    answer:
-    'Yes! You can select up to 100 HEIC files and convert them all to JPG simultaneously in your browser. Use the folder scan feature to import entire directories of iPhone photos.'
-  },
-  {
-    question: 'Why does my iPhone save photos as HEIC?',
-    answer:
-    'Apple uses HEIC as the default format because it offers better compression than JPG while maintaining quality. This saves storage space on your device. However, you can change this in Settings > Camera > Formats > Most Compatible.'
-  },
-  {
-    question: 'Are my HEIC photos uploaded to a server?',
-    answer:
-    'No. All conversion happens directly in your browser using local processing. Your private photos never leave your device, ensuring complete privacy and security.'
-  },
-  {
-    question: 'What if my HEIC file fails to convert?',
-    answer:
-    'Some HEIC files use advanced encoding that browsers cannot decode. If conversion fails, try exporting the photo from your iPhone with "Most Compatible" format enabled, or use the Photos app to share as JPG.'
-  }];
+    {
+      question: 'Why do I need to convert HEIC to JPG?',
+      answer:
+        "HEIC is Apple's proprietary image format. While efficient, it's not supported by many websites, Windows computers, or Android devices. Converting to JPG ensures your photos can be viewed everywhere."
+    },
+    {
+      question: 'Does converting HEIC to JPG reduce quality?',
+      answer:
+        'JPG is a lossy format, so there is technically some data loss, but our converter uses high-quality algorithms to ensure the visual difference is negligible for most users. At 90% quality, most people cannot tell the difference.'
+    },
+    {
+      question: 'Can I convert multiple HEIC files at once?',
+      answer:
+        'Yes! You can select up to 100 HEIC files and convert them all to JPG simultaneously in your browser. Use the folder scan feature to import entire directories of iPhone photos.'
+    },
+    {
+      question: 'Why does my iPhone save photos as HEIC?',
+      answer:
+        'Apple uses HEIC as the default format because it offers better compression than JPG while maintaining quality. This saves storage space on your device. However, you can change this in Settings > Camera > Formats > Most Compatible.'
+    },
+    {
+      question: 'Are my HEIC photos uploaded to a server?',
+      answer:
+        'No. All conversion happens directly in your browser using local processing. Your private photos never leave your device, ensuring complete privacy and security.'
+    },
+    {
+      question: 'What if my HEIC file fails to convert?',
+      answer:
+        'Some HEIC files use advanced encoding that browsers cannot decode. If conversion fails, try exporting the photo from your iPhone with "Most Compatible" format enabled, or use the Photos app to share as JPG.'
+    }];
+
+  const howToSteps = [
+    { name: 'Upload HEIC Files', text: 'Click "Upload Images" or drag and drop your HEIC photos from iPhone or iPad into the upload area.' },
+    { name: 'Select JPG Format', text: 'Choose JPG as the output format from the format dropdown. Adjust quality if needed (80% recommended).' },
+    { name: 'Convert Images', text: 'Click "Convert All Images" button. The conversion happens instantly in your browser.' },
+    { name: 'Download Results', text: 'Download individual JPG files or click "Download ZIP" to get all converted images at once.' }
+  ];
+
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://localimage.online/' },
+    { name: 'HEIC to JPG Converter', url: 'https://localimage.online/heic-to-jpg' }
+  ];
 
   return (
     <>
@@ -44,8 +57,10 @@ export function HeicToJpgPage() {
         title="HEIC to JPG Converter - Free Online Tool | LocalImage.online"
         description="Convert HEIC photos from iPhone to JPG format instantly. Free, secure, and works offline. No software installation required. Process up to 100 images at once."
         canonicalPath="/heic-to-jpg"
-        keywords="heic to jpg, convert heic to jpg, heic converter, iphone photo converter, heic to jpeg, apple heic converter, ios photo converter"
-        faqs={faqs} />
+        keywords="heic to jpg, convert heic to jpg, heic converter, iphone photo converter, heic to jpeg, apple heic converter, ios photo converter, heic to jpg online free, convert iphone photos to jpg"
+        faqs={faqs}
+        howToSteps={howToSteps}
+        breadcrumbs={breadcrumbs} />
 
 
       <div className="space-y-16 pb-16">
